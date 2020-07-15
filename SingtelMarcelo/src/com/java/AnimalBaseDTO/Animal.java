@@ -6,13 +6,18 @@ public class Animal {
 	public boolean canWalk = false;
 	public boolean canSing = false;
 	public boolean canSwim = false;
+	public boolean canMakeASound = false;
 	
 	public void walk(){
-		System.out.println("I am walking"); 
+		if(canWalk) {
+			System.out.println("I am walking"); 
+		}
 	}
 	
 	public void makeSounds() {
-		System.out.println("I am making sounds");
+		if(canMakeASound) {
+			System.out.println("I am making sounds");
+		}
 	}
 
 	public boolean isCanFly() {
@@ -45,6 +50,14 @@ public class Animal {
 
 	public void setCanSwim(boolean canSwim) {
 		this.canSwim = canSwim;
+	}
+
+	public boolean isCanMakeASound() {
+		return canMakeASound;
+	}
+
+	public void setCanMakeASound(boolean canMakeASound) {
+		this.canMakeASound = canMakeASound;
 	}
 	
 	
