@@ -1,5 +1,6 @@
-package com.java.DTO;
+package com.java.AnimalBaseDTO.air;
 
+import com.java.AnimalBaseDTO.Bird;
 
 public class Rooster extends Bird {
 	

@@ -1,4 +1,4 @@
-package com.java.DTO;
+package com.java.AnimalBaseDTO;
 
 public class Animal {
 	

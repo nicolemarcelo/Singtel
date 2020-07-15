@@ -1,6 +1,6 @@
 package com.java.Main;
 
-import com.java.DTO.Bird;
+import com.java.AnimalBaseDTO.Bird;
 
 public class Solution {
 
