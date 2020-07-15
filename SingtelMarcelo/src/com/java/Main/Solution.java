@@ -14,6 +14,7 @@ import com.java.AnimalBaseDTO.Fish;
 import com.java.AnimalBaseDTO.air.Parrot;
 import com.java.AnimalBaseDTO.air.Rooster;
 import com.java.AnimalBaseDTO.sea.Shark;
+import com.java.util.Constants;
 
 public class Solution {
 
@@ -61,6 +62,8 @@ public class Solution {
 		System.out.println("Animals that can walk: " + animalsThatCanWalk);
 		System.out.println("Animals that can sing: " + animalsThatCanSing);
 		System.out.println("Animals that can swim: " + animalsThatCanSwim);
+		
+		new Rooster().makeSounds(Constants.FILIPINO);
 	}
 
 }
