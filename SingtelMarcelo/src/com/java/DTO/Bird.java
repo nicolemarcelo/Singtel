@@ -2,6 +2,12 @@ package com.java.DTO;
 
 public class Bird extends Animal {
 	
+	public Bird() {
+		canWalk = true;
+		canFly = true;
+		canSing = true;
+	}
+	
 	public void fly() {
 		System.out.println("I am flying");
 	}
