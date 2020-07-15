@@ -1,13 +1,7 @@
 package com.java.AnimalBaseDTO.air;
 
-import com.java.AnimalBaseDTO.Bird;
 
-public class Rooster extends Bird {
-	
-	Chicken rooster;
-	public Rooster() {
-		rooster = new Chicken();
-	}
+public class Rooster extends Chicken {
 	
 	@Override
 	public void makeSounds() {
