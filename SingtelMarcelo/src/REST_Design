@@ -1,0 +1,57 @@
+Sample REST method to retrieve Rooster sounds based on language
+Other animals can be queried for by creating custom paths
+/animal/{type}
+and more in depth according to what you want to retrieve
+/animal/{type}/{action}
+
+@GET
+@Produces(MediaType.APPLICATION_JSON)
+@Path("/animal/rooster/{language}")
+public Response roosterSound(@PathParam("language") String language) {
+	JSONObject resultObj = new JSONObject();
+	JSONArray resultArr = new JSONArray();
+	String roosterSound = "";
+	
+	try {
+		if(language.equalsIgnoreCase(Constants.DANISH)) {
+			roosterSound = "kykyliky";
+		} else if(language.equalsIgnoreCase(Constants.DUTCH)) {
+			roosterSound = "kukeleku";
+		} else if(language.equalsIgnoreCase(Constants.FILIPINO)) {
+			roosterSound = "kokkororo";
+		} else if(language.equalsIgnoreCase(Constants.FINNISH)) {
+			roosterSound = "kukko kiekuu";
+		} else if(language.equalsIgnoreCase(Constants.FRENCH)) {
+			roosterSound = "cocorico";
+		} else if(language.equalsIgnoreCase(Constants.GERMAN)) {
+			roosterSound = "kikeriki";
+		} else if(language.equalsIgnoreCase(Constants.GREEK)) {
+			System.out.println("kikiriki");
+		} else if(language.equalsIgnoreCase(Constants.HEBREW)) {
+			roosterSound = "coo-koo-ri-koo";
+		} else if(language.equalsIgnoreCase(Constants.HUNGARIAN)) {
+			roosterSound = "kukuriku";
+		} else if(language.equalsIgnoreCase(Constants.ITALIAN)) {
+			roosterSound = "chicchirichi";
+		} else if(language.equalsIgnoreCase(Constants.JAPANESE)) {
+			roosterSound = "ko-ke-kok-ko-o";
+		} else if(language.equalsIgnoreCase(Constants.PORTUGUESE)) {
+			roosterSound = "cucurucu";
+		} else if(language.equalsIgnoreCase(Constants.RUSSIAN)) {
+			roosterSound = "kukareku";
+		} else if(language.equalsIgnoreCase(Constants.SWEDISH)) {
+			roosterSound = "kuckeliku";
+		} else if(language.equalsIgnoreCase(Constants.TURKISH)) {
+			roosterSound = "kuk-kurri-kuuu";
+		} else if(language.equalsIgnoreCase(Constants.URDU)) {
+			roosterSound = "kuklooku";
+		}
+	} catch (Exception e) {
+		log.error("Exception in roosterSound: " + e);
+	}
+	resultArr.add("roosterSound", roosterSound)
+	result.put("rooster", resultArr);
+	
+	return Response.ok(result, MediaType.APPLICATION_JSON).build());
+
+}
