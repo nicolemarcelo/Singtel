@@ -1,6 +1,7 @@
 package com.java.AnimalBaseDTO;
 
-public class Fish extends Animal {
+
+public class Fish extends Animal implements Swimmers {
 
 	public String color;
 	public String size;
@@ -8,6 +9,11 @@ public class Fish extends Animal {
 	
 	public Fish() {
 		canSwim = true;
+	}
+	
+	@Override
+	public void swim() {
+		System.out.println("I am a fish and I swim!");
 	}
 
 	public String getColor() {
